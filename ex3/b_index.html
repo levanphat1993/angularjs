@@ -1,0 +1,236 @@
+<html lang="en" ng-con ng-app="myNinjaApp">
+
+    <head>
+        <link rel="stylesheet" href="/content/css/styles.css">
+        <script src="/app/lib/angular.min.js"></script>
+    </head>
+
+    <body>
+        <div ng-controller="NinjaController">
+            
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>salary</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees">
+                        <td>{{ employee.id }}</td>
+                        <td>{{ employee.name }}</td>
+                        <td>{{ employee.gender }}</td>
+                        <td>{{ employee.salary }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br /> <br />
+
+            <table>
+                <tr>
+                    <td>Your String</td>
+                    <td>
+                        <input type="text" ng-model="input" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Result</td>
+                    <td>
+                        <input type="text" ng-model="output" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" ng-click="transformString(input)" value="Process String">
+                    </td>
+                </tr>
+            </table>
+
+            <br /> <br />
+
+            <button id="top" ng-click="scrollTo('bottom')">Go to bottom of the page</button>
+            
+            <br /> <br />
+
+            <div class="scroll">
+                
+                <h1>(PLO)-  Chúng ta cần xây dựng các cơ chế, quy định để phòng, chống tham nhũng, tiêu cực ngay trong công tác xây dựng pháp luật, không để bị chi phối bởi các hành vi không lành mạnh của bất cứ tổ chức, cá nhân nào.
+                Sáng 22-8, Ủy ban Thường vụ Quốc hội và Chính phủ tổ chức Hội nghị đánh giá tình hình thực hiện Kế hoạch số 81/KH-UBTVQH15 và triển khai Chương trình xây dựng luật, pháp lệnh.</h1>
+                <h3> Hoàn thành 49,6% tổng số nhiệm vụ lập pháp </h3>
+    
+                <p> Chủ nhiệm Ủy ban Pháp luật Hoàng Thanh Tùng cho biết, ngay sau khi Bộ Chính trị thông qua Đề án Định hướng và ban hành Kết luận số 19-KL/TW, Ủy ban Thường vụ Quốc hội đã tổ chức Hội nghị trực tuyến toàn quốc để kịp thời quán triệt, triển khai thực hiện Kết luận của Bộ Chính trị và các nhiệm vụ lập pháp; đồng thời, ban hành Kế hoạch số 81/KH-UBTVQH15 về triển khai thực hiện Kết luận số 19-KL/TW và Đề án định hướng Chương trình xây dựng pháp luật nhiệm kỳ Quốc hội Khóa XV, tạo cơ sở pháp lý để các cơ quan, tổ chức có liên quan tổ chức triển khai thực hiện với 137 nhiệm vụ lập pháp.
+                Chủ tịch Quốc hội, các Phó Chủ tịch Quốc hội chỉ đạo sát sao, thường xuyên đôn đốc, bố trí nhiều cuộc làm việc với tinh thần vào cuộc “từ sớm, từ xa” để nghe các Bộ, ngành, cơ quan của Quốc hội báo cáo về công tác soạn thảo và nội dung các dự án luật; về công tác chuẩn bị thẩm tra, tiếp thu, chỉnh lý; kịp thời cho ý kiến chỉ đạo về các nội dung lớn để hoàn thiện trước khi trình Ủy ban Thường vụ Quốc hội, Quốc hội xem xét.
+
+                Chủ nhiệm Ủy ban Pháp luật cho hay, chất lượng các dự án luật, pháp lệnh, dự thảo nghị quyết trình Quốc hội, Ủy ban Thường vụ Quốc hội xem xét ngày càng được nâng lên, đạt sự đồng thuận cao khi biểu quyết thông qua.
+
+                Sau 9 tháng triển khai Kết luận số 81, với sự chỉ đạo sát sao của Ủy ban Thường vụ Quốc hội, Chính phủ và sự nỗ lực, quyết tâm của các bộ, cơ quan được giao trực tiếp thực hiện, đến nay đã hoàn thành 49,6% tổng số nhiệm vụ lập pháp đề ra.
+
+                Từ đầu năm 2022 đến nay, Quốc hội đã thông qua 6 luật, 8 nghị quyết, Ủy ban Thường vụ Quốc hội đã thông qua 2 pháp lệnh, 2 nghị quyết; tại Kỳ họp thứ Ba, Quốc hội đã xem xét, cho ý kiến 6 dự án luật. Đối với các dự án luật đã được Quốc hội cho ý kiến, ngay sau kỳ họp Quốc hội, các cơ quan đã tích cực nghiên cứu, tiếp thu ý kiến đại biểu Quốc hội để chỉnh lý. Đến nay, đã có 5/6 dự án được Ủy ban Thường vụ Quốc hội xem xét, cho ý kiến.
+
+                Chính phủ, Tòa án Nhân dân tối cao, Viện Kiểm sát Nhân dân tối cao, Kiểm toán Nhà nước và các cơ quan, tổ chức hữu quan, trong phạm vi chức năng, nhiệm vụ được giao đã triển khai thực hiện đồng bộ, có hiệu quả các giải pháp được đề ra. Đặc biệt, Quốc hội, Ủy ban Thường vụ Quốc hội, các cơ quan của Quốc hội, cơ quan thuộc Ủy ban Thường vụ Quốc hội đã có nhiều đổi mới thiết thực, hiệu quả trong công tác lập pháp như: linh hoạt, sáng tạo tổ chức các kỳ họp theo hình thức trực tuyến và kết hợp trực tuyến với trực tiếp; tổ chức kỳ họp bất thường xem xét, kịp thời quyết định một số nội dung quan trọng, cấp bách do thực tiễn cuộc sống và yêu cầu phát triển đặt ra…
+
+                Tuy vậy, một số tồn tại, hạn chế cần được khắc phục, rút kinh nghiệm như: một số cơ quan, tổ chức chưa kịp thời ban hành kế hoạch triển khai thực hiện, chậm gửi báo cáo hoặc báo cáo không đầy đủ nội dung theo yêu cầu về kết quả, tiến độ thực hiện các nhiệm vụ lập pháp được giao…
+
+                Để bảo đảm hoàn thành thắng lợi Kế hoạch số 81/KH-UBTVQH15, Chương trình xây dựng luật, pháp lệnh các tháng cuối năm 2022 và năm 2023, Ủy ban Thường vụ Quốc hội đề nghị Chính phủ, Tòa án Nhân dân tối cao, Viện Kiểm sát Nhân dân tối cao, Kiểm toán Nhà nước và các cơ quan, tổ chức có liên quan tiếp tục quán triệt, xác định việc triển khai thực hiện Kết luận của Bộ Chính trị, Đề án Định hướng, Kế hoạch số 81 và Chương trình xây dựng luật, pháp lệnh là nhiệm vụ chính trị trọng tâm của 4 tháng cuối năm 2022 và năm 2023.
+
+                Đối với 32 nhiệm vụ lập pháp đã hoàn thành việc nghiên cứu, rà soát và đề xuất sửa đổi, bổ sung, ban hành mới luật, pháp lệnh, nghị quyết, đề nghị các cơ quan khẩn trương chuẩn bị hồ sơ đề nghị xây dựng luật theo quy định để trình Quốc hội, Ủy ban Thường vụ Quốc hội xem xét theo tiến độ, trong đó cần chú trọng bảo đảm chất lượng, tránh phải chuẩn bị lại vì chưa đáp ứng được yêu cầu.
+
+                Đối với 44 nhiệm vụ lập pháp có tiến độ hoàn thành trước ngày 31-12, Ủy ban Thường vụ Quốc hội đề nghị các cơ quan tiếp tục chủ động triển khai thực hiện, bám sát các yêu cầu; trường hợp có khó khăn, vướng mắc thì kịp thời báo cáo, xin ý kiến Ủy ban Thường vụ Quốc hội để có phương án giải quyết.
+
+                Thường xuyên rà soát để điều chỉnh, bổ sung theo thẩm quyền hoặc kiến nghị điều chỉnh, bổ sung các nhiệm vụ lập pháp để bảo đảm kịp thời thể chế hóa chủ trương, định hướng được đề ra trong các nghị quyết mới của Ban Chấp hành Trung ương, Bộ Chính trị, Ban Bí thư, đáp ứng đòi hỏi, yêu cầu cấp thiết của đời sống xã hội.
+
+                Các cơ quan được giao nhiệm vụ soạn thảo, chủ trì thẩm tra, chỉnh lý dự án luật thuộc Chương trình xây dựng luật, pháp lệnh cần xây dựng kế hoạch cụ thể, chi tiết các hoạt động và tiến độ thực hiện cho từng dự án; bảo đảm thực hiện đúng nguyên tắc những vấn đề cấp bách, đã chín, đã rõ, được thực tiễn chứng minh và có sự thống nhất cao thì mới đề xuất quy định trong luật, những vấn đề tuy cấp bách, cần thiết nhưng là vấn đề mới, chưa có sự đồng thuận cao thì tiếp tục nghiên cứu thận trọng, thấu đáo, nếu cần thiết có thể đề xuất thực hiện thí điểm.
+
+                Ủy ban Thường vụ Quốc hội, Chính phủ tăng cường bố trí các phiên họp chuyên đề pháp luật để kịp thời xem xét đề nghị xây dựng luật, pháp lệnh; cho ý kiến về các dự án trình Quốc hội; xem xét việc tiếp thu, chỉnh lý các dự án để trình Quốc hội thông qua; ưu tiên đưa vào Chương trình các dự án là kết quả rà soát của các nhiệm vụ lập pháp theo Kế hoạch.
+
+                Phối hợp từ sớm, từ xa, cộng đồng trách nhiệm, lắng nghe </p>
+
+
+                <h1>(PLO)-  Chúng ta cần xây dựng các cơ chế, quy định để phòng, chống tham nhũng, tiêu cực ngay trong công tác xây dựng pháp luật, không để bị chi phối bởi các hành vi không lành mạnh của bất cứ tổ chức, cá nhân nào.
+                    Sáng 22-8, Ủy ban Thường vụ Quốc hội và Chính phủ tổ chức Hội nghị đánh giá tình hình thực hiện Kế hoạch số 81/KH-UBTVQH15 và triển khai Chương trình xây dựng luật, pháp lệnh.</h1>
+                    
+                    <h3> Hoàn thành 49,6% tổng số nhiệm vụ lập pháp </h3>
+                    
+                    <p> Chủ nhiệm Ủy ban Pháp luật Hoàng Thanh Tùng cho biết, ngay sau khi Bộ Chính trị thông qua Đề án Định hướng và ban hành Kết luận số 19-KL/TW, Ủy ban Thường vụ Quốc hội đã tổ chức Hội nghị trực tuyến toàn quốc để kịp thời quán triệt, triển khai thực hiện Kết luận của Bộ Chính trị và các nhiệm vụ lập pháp; đồng thời, ban hành Kế hoạch số 81/KH-UBTVQH15 về triển khai thực hiện Kết luận số 19-KL/TW và Đề án định hướng Chương trình xây dựng pháp luật nhiệm kỳ Quốc hội Khóa XV, tạo cơ sở pháp lý để các cơ quan, tổ chức có liên quan tổ chức triển khai thực hiện với 137 nhiệm vụ lập pháp.
+                    Chủ tịch Quốc hội, các Phó Chủ tịch Quốc hội chỉ đạo sát sao, thường xuyên đôn đốc, bố trí nhiều cuộc làm việc với tinh thần vào cuộc “từ sớm, từ xa” để nghe các Bộ, ngành, cơ quan của Quốc hội báo cáo về công tác soạn thảo và nội dung các dự án luật; về công tác chuẩn bị thẩm tra, tiếp thu, chỉnh lý; kịp thời cho ý kiến chỉ đạo về các nội dung lớn để hoàn thiện trước khi trình Ủy ban Thường vụ Quốc hội, Quốc hội xem xét.
+    
+                    Chủ nhiệm Ủy ban Pháp luật cho hay, chất lượng các dự án luật, pháp lệnh, dự thảo nghị quyết trình Quốc hội, Ủy ban Thường vụ Quốc hội xem xét ngày càng được nâng lên, đạt sự đồng thuận cao khi biểu quyết thông qua.
+    
+                    Sau 9 tháng triển khai Kết luận số 81, với sự chỉ đạo sát sao của Ủy ban Thường vụ Quốc hội, Chính phủ và sự nỗ lực, quyết tâm của các bộ, cơ quan được giao trực tiếp thực hiện, đến nay đã hoàn thành 49,6% tổng số nhiệm vụ lập pháp đề ra.
+    
+                    Từ đầu năm 2022 đến nay, Quốc hội đã thông qua 6 luật, 8 nghị quyết, Ủy ban Thường vụ Quốc hội đã thông qua 2 pháp lệnh, 2 nghị quyết; tại Kỳ họp thứ Ba, Quốc hội đã xem xét, cho ý kiến 6 dự án luật. Đối với các dự án luật đã được Quốc hội cho ý kiến, ngay sau kỳ họp Quốc hội, các cơ quan đã tích cực nghiên cứu, tiếp thu ý kiến đại biểu Quốc hội để chỉnh lý. Đến nay, đã có 5/6 dự án được Ủy ban Thường vụ Quốc hội xem xét, cho ý kiến.
+    
+                    Chính phủ, Tòa án Nhân dân tối cao, Viện Kiểm sát Nhân dân tối cao, Kiểm toán Nhà nước và các cơ quan, tổ chức hữu quan, trong phạm vi chức năng, nhiệm vụ được giao đã triển khai thực hiện đồng bộ, có hiệu quả các giải pháp được đề ra. Đặc biệt, Quốc hội, Ủy ban Thường vụ Quốc hội, các cơ quan của Quốc hội, cơ quan thuộc Ủy ban Thường vụ Quốc hội đã có nhiều đổi mới thiết thực, hiệu quả trong công tác lập pháp như: linh hoạt, sáng tạo tổ chức các kỳ họp theo hình thức trực tuyến và kết hợp trực tuyến với trực tiếp; tổ chức kỳ họp bất thường xem xét, kịp thời quyết định một số nội dung quan trọng, cấp bách do thực tiễn cuộc sống và yêu cầu phát triển đặt ra…
+    
+                    Tuy vậy, một số tồn tại, hạn chế cần được khắc phục, rút kinh nghiệm như: một số cơ quan, tổ chức chưa kịp thời ban hành kế hoạch triển khai thực hiện, chậm gửi báo cáo hoặc báo cáo không đầy đủ nội dung theo yêu cầu về kết quả, tiến độ thực hiện các nhiệm vụ lập pháp được giao…
+    
+                    Để bảo đảm hoàn thành thắng lợi Kế hoạch số 81/KH-UBTVQH15, Chương trình xây dựng luật, pháp lệnh các tháng cuối năm 2022 và năm 2023, Ủy ban Thường vụ Quốc hội đề nghị Chính phủ, Tòa án Nhân dân tối cao, Viện Kiểm sát Nhân dân tối cao, Kiểm toán Nhà nước và các cơ quan, tổ chức có liên quan tiếp tục quán triệt, xác định việc triển khai thực hiện Kết luận của Bộ Chính trị, Đề án Định hướng, Kế hoạch số 81 và Chương trình xây dựng luật, pháp lệnh là nhiệm vụ chính trị trọng tâm của 4 tháng cuối năm 2022 và năm 2023.
+    
+                    Đối với 32 nhiệm vụ lập pháp đã hoàn thành việc nghiên cứu, rà soát và đề xuất sửa đổi, bổ sung, ban hành mới luật, pháp lệnh, nghị quyết, đề nghị các cơ quan khẩn trương chuẩn bị hồ sơ đề nghị xây dựng luật theo quy định để trình Quốc hội, Ủy ban Thường vụ Quốc hội xem xét theo tiến độ, trong đó cần chú trọng bảo đảm chất lượng, tránh phải chuẩn bị lại vì chưa đáp ứng được yêu cầu.
+    
+                    Đối với 44 nhiệm vụ lập pháp có tiến độ hoàn thành trước ngày 31-12, Ủy ban Thường vụ Quốc hội đề nghị các cơ quan tiếp tục chủ động triển khai thực hiện, bám sát các yêu cầu; trường hợp có khó khăn, vướng mắc thì kịp thời báo cáo, xin ý kiến Ủy ban Thường vụ Quốc hội để có phương án giải quyết.
+    
+                    Thường xuyên rà soát để điều chỉnh, bổ sung theo thẩm quyền hoặc kiến nghị điều chỉnh, bổ sung các nhiệm vụ lập pháp để bảo đảm kịp thời thể chế hóa chủ trương, định hướng được đề ra trong các nghị quyết mới của Ban Chấp hành Trung ương, Bộ Chính trị, Ban Bí thư, đáp ứng đòi hỏi, yêu cầu cấp thiết của đời sống xã hội.
+    
+                    Các cơ quan được giao nhiệm vụ soạn thảo, chủ trì thẩm tra, chỉnh lý dự án luật thuộc Chương trình xây dựng luật, pháp lệnh cần xây dựng kế hoạch cụ thể, chi tiết các hoạt động và tiến độ thực hiện cho từng dự án; bảo đảm thực hiện đúng nguyên tắc những vấn đề cấp bách, đã chín, đã rõ, được thực tiễn chứng minh và có sự thống nhất cao thì mới đề xuất quy định trong luật, những vấn đề tuy cấp bách, cần thiết nhưng là vấn đề mới, chưa có sự đồng thuận cao thì tiếp tục nghiên cứu thận trọng, thấu đáo, nếu cần thiết có thể đề xuất thực hiện thí điểm.
+    
+                    Ủy ban Thường vụ Quốc hội, Chính phủ tăng cường bố trí các phiên họp chuyên đề pháp luật để kịp thời xem xét đề nghị xây dựng luật, pháp lệnh; cho ý kiến về các dự án trình Quốc hội; xem xét việc tiếp thu, chỉnh lý các dự án để trình Quốc hội thông qua; ưu tiên đưa vào Chương trình các dự án là kết quả rà soát của các nhiệm vụ lập pháp theo Kế hoạch.
+    
+                    Phối hợp từ sớm, từ xa, cộng đồng trách nhiệm, lắng nghe </p>
+
+
+
+
+
+                    <h1>(PLO)-  Chúng ta cần xây dựng các cơ chế, quy định để phòng, chống tham nhũng, tiêu cực ngay trong công tác xây dựng pháp luật, không để bị chi phối bởi các hành vi không lành mạnh của bất cứ tổ chức, cá nhân nào.
+                        Sáng 22-8, Ủy ban Thường vụ Quốc hội và Chính phủ tổ chức Hội nghị đánh giá tình hình thực hiện Kế hoạch số 81/KH-UBTVQH15 và triển khai Chương trình xây dựng luật, pháp lệnh.</h1>
+                        
+                        <h3> Hoàn thành 49,6% tổng số nhiệm vụ lập pháp </h3>
+                        
+                        <p> Chủ nhiệm Ủy ban Pháp luật Hoàng Thanh Tùng cho biết, ngay sau khi Bộ Chính trị thông qua Đề án Định hướng và ban hành Kết luận số 19-KL/TW, Ủy ban Thường vụ Quốc hội đã tổ chức Hội nghị trực tuyến toàn quốc để kịp thời quán triệt, triển khai thực hiện Kết luận của Bộ Chính trị và các nhiệm vụ lập pháp; đồng thời, ban hành Kế hoạch số 81/KH-UBTVQH15 về triển khai thực hiện Kết luận số 19-KL/TW và Đề án định hướng Chương trình xây dựng pháp luật nhiệm kỳ Quốc hội Khóa XV, tạo cơ sở pháp lý để các cơ quan, tổ chức có liên quan tổ chức triển khai thực hiện với 137 nhiệm vụ lập pháp.
+                        Chủ tịch Quốc hội, các Phó Chủ tịch Quốc hội chỉ đạo sát sao, thường xuyên đôn đốc, bố trí nhiều cuộc làm việc với tinh thần vào cuộc “từ sớm, từ xa” để nghe các Bộ, ngành, cơ quan của Quốc hội báo cáo về công tác soạn thảo và nội dung các dự án luật; về công tác chuẩn bị thẩm tra, tiếp thu, chỉnh lý; kịp thời cho ý kiến chỉ đạo về các nội dung lớn để hoàn thiện trước khi trình Ủy ban Thường vụ Quốc hội, Quốc hội xem xét.
+        
+                        Chủ nhiệm Ủy ban Pháp luật cho hay, chất lượng các dự án luật, pháp lệnh, dự thảo nghị quyết trình Quốc hội, Ủy ban Thường vụ Quốc hội xem xét ngày càng được nâng lên, đạt sự đồng thuận cao khi biểu quyết thông qua.
+        
+                        Sau 9 tháng triển khai Kết luận số 81, với sự chỉ đạo sát sao của Ủy ban Thường vụ Quốc hội, Chính phủ và sự nỗ lực, quyết tâm của các bộ, cơ quan được giao trực tiếp thực hiện, đến nay đã hoàn thành 49,6% tổng số nhiệm vụ lập pháp đề ra.
+        
+                        Từ đầu năm 2022 đến nay, Quốc hội đã thông qua 6 luật, 8 nghị quyết, Ủy ban Thường vụ Quốc hội đã thông qua 2 pháp lệnh, 2 nghị quyết; tại Kỳ họp thứ Ba, Quốc hội đã xem xét, cho ý kiến 6 dự án luật. Đối với các dự án luật đã được Quốc hội cho ý kiến, ngay sau kỳ họp Quốc hội, các cơ quan đã tích cực nghiên cứu, tiếp thu ý kiến đại biểu Quốc hội để chỉnh lý. Đến nay, đã có 5/6 dự án được Ủy ban Thường vụ Quốc hội xem xét, cho ý kiến.
+        
+                        Chính phủ, Tòa án Nhân dân tối cao, Viện Kiểm sát Nhân dân tối cao, Kiểm toán Nhà nước và các cơ quan, tổ chức hữu quan, trong phạm vi chức năng, nhiệm vụ được giao đã triển khai thực hiện đồng bộ, có hiệu quả các giải pháp được đề ra. Đặc biệt, Quốc hội, Ủy ban Thường vụ Quốc hội, các cơ quan của Quốc hội, cơ quan thuộc Ủy ban Thường vụ Quốc hội đã có nhiều đổi mới thiết thực, hiệu quả trong công tác lập pháp như: linh hoạt, sáng tạo tổ chức các kỳ họp theo hình thức trực tuyến và kết hợp trực tuyến với trực tiếp; tổ chức kỳ họp bất thường xem xét, kịp thời quyết định một số nội dung quan trọng, cấp bách do thực tiễn cuộc sống và yêu cầu phát triển đặt ra…
+        
+                        Tuy vậy, một số tồn tại, hạn chế cần được khắc phục, rút kinh nghiệm như: một số cơ quan, tổ chức chưa kịp thời ban hành kế hoạch triển khai thực hiện, chậm gửi báo cáo hoặc báo cáo không đầy đủ nội dung theo yêu cầu về kết quả, tiến độ thực hiện các nhiệm vụ lập pháp được giao…
+        
+                        Để bảo đảm hoàn thành thắng lợi Kế hoạch số 81/KH-UBTVQH15, Chương trình xây dựng luật, pháp lệnh các tháng cuối năm 2022 và năm 2023, Ủy ban Thường vụ Quốc hội đề nghị Chính phủ, Tòa án Nhân dân tối cao, Viện Kiểm sát Nhân dân tối cao, Kiểm toán Nhà nước và các cơ quan, tổ chức có liên quan tiếp tục quán triệt, xác định việc triển khai thực hiện Kết luận của Bộ Chính trị, Đề án Định hướng, Kế hoạch số 81 và Chương trình xây dựng luật, pháp lệnh là nhiệm vụ chính trị trọng tâm của 4 tháng cuối năm 2022 và năm 2023.
+        
+                        Đối với 32 nhiệm vụ lập pháp đã hoàn thành việc nghiên cứu, rà soát và đề xuất sửa đổi, bổ sung, ban hành mới luật, pháp lệnh, nghị quyết, đề nghị các cơ quan khẩn trương chuẩn bị hồ sơ đề nghị xây dựng luật theo quy định để trình Quốc hội, Ủy ban Thường vụ Quốc hội xem xét theo tiến độ, trong đó cần chú trọng bảo đảm chất lượng, tránh phải chuẩn bị lại vì chưa đáp ứng được yêu cầu.
+        
+                        Đối với 44 nhiệm vụ lập pháp có tiến độ hoàn thành trước ngày 31-12, Ủy ban Thường vụ Quốc hội đề nghị các cơ quan tiếp tục chủ động triển khai thực hiện, bám sát các yêu cầu; trường hợp có khó khăn, vướng mắc thì kịp thời báo cáo, xin ý kiến Ủy ban Thường vụ Quốc hội để có phương án giải quyết.
+        
+                        Thường xuyên rà soát để điều chỉnh, bổ sung theo thẩm quyền hoặc kiến nghị điều chỉnh, bổ sung các nhiệm vụ lập pháp để bảo đảm kịp thời thể chế hóa chủ trương, định hướng được đề ra trong các nghị quyết mới của Ban Chấp hành Trung ương, Bộ Chính trị, Ban Bí thư, đáp ứng đòi hỏi, yêu cầu cấp thiết của đời sống xã hội.
+        
+                        Các cơ quan được giao nhiệm vụ soạn thảo, chủ trì thẩm tra, chỉnh lý dự án luật thuộc Chương trình xây dựng luật, pháp lệnh cần xây dựng kế hoạch cụ thể, chi tiết các hoạt động và tiến độ thực hiện cho từng dự án; bảo đảm thực hiện đúng nguyên tắc những vấn đề cấp bách, đã chín, đã rõ, được thực tiễn chứng minh và có sự thống nhất cao thì mới đề xuất quy định trong luật, những vấn đề tuy cấp bách, cần thiết nhưng là vấn đề mới, chưa có sự đồng thuận cao thì tiếp tục nghiên cứu thận trọng, thấu đáo, nếu cần thiết có thể đề xuất thực hiện thí điểm.
+        
+                        Ủy ban Thường vụ Quốc hội, Chính phủ tăng cường bố trí các phiên họp chuyên đề pháp luật để kịp thời xem xét đề nghị xây dựng luật, pháp lệnh; cho ý kiến về các dự án trình Quốc hội; xem xét việc tiếp thu, chỉnh lý các dự án để trình Quốc hội thông qua; ưu tiên đưa vào Chương trình các dự án là kết quả rà soát của các nhiệm vụ lập pháp theo Kế hoạch.
+        
+                        Phối hợp từ sớm, từ xa, cộng đồng trách nhiệm, lắng nghe </p>
+
+
+
+                        <h1>(PLO)-  Chúng ta cần xây dựng các cơ chế, quy định để phòng, chống tham nhũng, tiêu cực ngay trong công tác xây dựng pháp luật, không để bị chi phối bởi các hành vi không lành mạnh của bất cứ tổ chức, cá nhân nào.
+                            Sáng 22-8, Ủy ban Thường vụ Quốc hội và Chính phủ tổ chức Hội nghị đánh giá tình hình thực hiện Kế hoạch số 81/KH-UBTVQH15 và triển khai Chương trình xây dựng luật, pháp lệnh.</h1>
+                            
+                            <h3> Hoàn thành 49,6% tổng số nhiệm vụ lập pháp </h3>
+                            
+                            <p> Chủ nhiệm Ủy ban Pháp luật Hoàng Thanh Tùng cho biết, ngay sau khi Bộ Chính trị thông qua Đề án Định hướng và ban hành Kết luận số 19-KL/TW, Ủy ban Thường vụ Quốc hội đã tổ chức Hội nghị trực tuyến toàn quốc để kịp thời quán triệt, triển khai thực hiện Kết luận của Bộ Chính trị và các nhiệm vụ lập pháp; đồng thời, ban hành Kế hoạch số 81/KH-UBTVQH15 về triển khai thực hiện Kết luận số 19-KL/TW và Đề án định hướng Chương trình xây dựng pháp luật nhiệm kỳ Quốc hội Khóa XV, tạo cơ sở pháp lý để các cơ quan, tổ chức có liên quan tổ chức triển khai thực hiện với 137 nhiệm vụ lập pháp.
+                            Chủ tịch Quốc hội, các Phó Chủ tịch Quốc hội chỉ đạo sát sao, thường xuyên đôn đốc, bố trí nhiều cuộc làm việc với tinh thần vào cuộc “từ sớm, từ xa” để nghe các Bộ, ngành, cơ quan của Quốc hội báo cáo về công tác soạn thảo và nội dung các dự án luật; về công tác chuẩn bị thẩm tra, tiếp thu, chỉnh lý; kịp thời cho ý kiến chỉ đạo về các nội dung lớn để hoàn thiện trước khi trình Ủy ban Thường vụ Quốc hội, Quốc hội xem xét.
+            
+                            Chủ nhiệm Ủy ban Pháp luật cho hay, chất lượng các dự án luật, pháp lệnh, dự thảo nghị quyết trình Quốc hội, Ủy ban Thường vụ Quốc hội xem xét ngày càng được nâng lên, đạt sự đồng thuận cao khi biểu quyết thông qua.
+            
+                            Sau 9 tháng triển khai Kết luận số 81, với sự chỉ đạo sát sao của Ủy ban Thường vụ Quốc hội, Chính phủ và sự nỗ lực, quyết tâm của các bộ, cơ quan được giao trực tiếp thực hiện, đến nay đã hoàn thành 49,6% tổng số nhiệm vụ lập pháp đề ra.
+            
+                            Từ đầu năm 2022 đến nay, Quốc hội đã thông qua 6 luật, 8 nghị quyết, Ủy ban Thường vụ Quốc hội đã thông qua 2 pháp lệnh, 2 nghị quyết; tại Kỳ họp thứ Ba, Quốc hội đã xem xét, cho ý kiến 6 dự án luật. Đối với các dự án luật đã được Quốc hội cho ý kiến, ngay sau kỳ họp Quốc hội, các cơ quan đã tích cực nghiên cứu, tiếp thu ý kiến đại biểu Quốc hội để chỉnh lý. Đến nay, đã có 5/6 dự án được Ủy ban Thường vụ Quốc hội xem xét, cho ý kiến.
+            
+                            Chính phủ, Tòa án Nhân dân tối cao, Viện Kiểm sát Nhân dân tối cao, Kiểm toán Nhà nước và các cơ quan, tổ chức hữu quan, trong phạm vi chức năng, nhiệm vụ được giao đã triển khai thực hiện đồng bộ, có hiệu quả các giải pháp được đề ra. Đặc biệt, Quốc hội, Ủy ban Thường vụ Quốc hội, các cơ quan của Quốc hội, cơ quan thuộc Ủy ban Thường vụ Quốc hội đã có nhiều đổi mới thiết thực, hiệu quả trong công tác lập pháp như: linh hoạt, sáng tạo tổ chức các kỳ họp theo hình thức trực tuyến và kết hợp trực tuyến với trực tiếp; tổ chức kỳ họp bất thường xem xét, kịp thời quyết định một số nội dung quan trọng, cấp bách do thực tiễn cuộc sống và yêu cầu phát triển đặt ra…
+            
+                            Tuy vậy, một số tồn tại, hạn chế cần được khắc phục, rút kinh nghiệm như: một số cơ quan, tổ chức chưa kịp thời ban hành kế hoạch triển khai thực hiện, chậm gửi báo cáo hoặc báo cáo không đầy đủ nội dung theo yêu cầu về kết quả, tiến độ thực hiện các nhiệm vụ lập pháp được giao…
+            
+                            Để bảo đảm hoàn thành thắng lợi Kế hoạch số 81/KH-UBTVQH15, Chương trình xây dựng luật, pháp lệnh các tháng cuối năm 2022 và năm 2023, Ủy ban Thường vụ Quốc hội đề nghị Chính phủ, Tòa án Nhân dân tối cao, Viện Kiểm sát Nhân dân tối cao, Kiểm toán Nhà nước và các cơ quan, tổ chức có liên quan tiếp tục quán triệt, xác định việc triển khai thực hiện Kết luận của Bộ Chính trị, Đề án Định hướng, Kế hoạch số 81 và Chương trình xây dựng luật, pháp lệnh là nhiệm vụ chính trị trọng tâm của 4 tháng cuối năm 2022 và năm 2023.
+            
+                            Đối với 32 nhiệm vụ lập pháp đã hoàn thành việc nghiên cứu, rà soát và đề xuất sửa đổi, bổ sung, ban hành mới luật, pháp lệnh, nghị quyết, đề nghị các cơ quan khẩn trương chuẩn bị hồ sơ đề nghị xây dựng luật theo quy định để trình Quốc hội, Ủy ban Thường vụ Quốc hội xem xét theo tiến độ, trong đó cần chú trọng bảo đảm chất lượng, tránh phải chuẩn bị lại vì chưa đáp ứng được yêu cầu.
+            
+                            Đối với 44 nhiệm vụ lập pháp có tiến độ hoàn thành trước ngày 31-12, Ủy ban Thường vụ Quốc hội đề nghị các cơ quan tiếp tục chủ động triển khai thực hiện, bám sát các yêu cầu; trường hợp có khó khăn, vướng mắc thì kịp thời báo cáo, xin ý kiến Ủy ban Thường vụ Quốc hội để có phương án giải quyết.
+            
+                            Thường xuyên rà soát để điều chỉnh, bổ sung theo thẩm quyền hoặc kiến nghị điều chỉnh, bổ sung các nhiệm vụ lập pháp để bảo đảm kịp thời thể chế hóa chủ trương, định hướng được đề ra trong các nghị quyết mới của Ban Chấp hành Trung ương, Bộ Chính trị, Ban Bí thư, đáp ứng đòi hỏi, yêu cầu cấp thiết của đời sống xã hội.
+            
+                            Các cơ quan được giao nhiệm vụ soạn thảo, chủ trì thẩm tra, chỉnh lý dự án luật thuộc Chương trình xây dựng luật, pháp lệnh cần xây dựng kế hoạch cụ thể, chi tiết các hoạt động và tiến độ thực hiện cho từng dự án; bảo đảm thực hiện đúng nguyên tắc những vấn đề cấp bách, đã chín, đã rõ, được thực tiễn chứng minh và có sự thống nhất cao thì mới đề xuất quy định trong luật, những vấn đề tuy cấp bách, cần thiết nhưng là vấn đề mới, chưa có sự đồng thuận cao thì tiếp tục nghiên cứu thận trọng, thấu đáo, nếu cần thiết có thể đề xuất thực hiện thí điểm.
+            
+                            Ủy ban Thường vụ Quốc hội, Chính phủ tăng cường bố trí các phiên họp chuyên đề pháp luật để kịp thời xem xét đề nghị xây dựng luật, pháp lệnh; cho ý kiến về các dự án trình Quốc hội; xem xét việc tiếp thu, chỉnh lý các dự án để trình Quốc hội thông qua; ưu tiên đưa vào Chương trình các dự án là kết quả rà soát của các nhiệm vụ lập pháp theo Kế hoạch.
+            
+                            Phối hợp từ sớm, từ xa, cộng đồng trách nhiệm, lắng nghe </p>
+            </div>
+
+            <br /> <br />
+
+            <button id="top" ng-click="scrollTo('bottom')">Go to bottom of the page</button>
+            
+            <br /> <br />
+
+            <span ng-repeat="country in countries">
+                <button ng-click="scrollToCountry(country.name)">{{country.name}}</button>
+            </span>
+
+            <div class="scroll-country ">
+
+
+                <fieldset ng-repeat="country in countries" id="{{country.name}}">
+                    <legend>{{country.name}}</legend>
+                    <ul>
+                        
+                        <li  ng-repeat="city in country.cities">
+                            {{city}}
+                        </li>
+                       
+                    </ul>
+                </fieldset>
+            </div>
+
+
+
+
+        </div>
+          
+    </body>
+
+    <script src="/app/app.js"></script>
+    <script src="/app/filters/gender.js"></script>
+    <script src="/app/directive/employeeList.js"></script>
+    <script src="/app/directive/employeeTable.js"></script>
+    <script src="/app/services/employee.js"></script>
+    <script src="/app/services/citiesOfCountry.js"></script>
+    <script src="/app/services/factory/string.js"></script>
+    <script src="/app/controllers/NinjaController.js"></script>
+</html>
+
+

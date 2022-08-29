@@ -1,0 +1,208 @@
+<html lang="en" ng-con ng-app="myNinjaApp">
+
+    <head>
+        <link rel="stylesheet" href="/content/css/styles.css">
+        <script src="/app/lib/angular.min.js"></script>
+    </head>
+
+    <body>
+        <div ng-controller="NinjaController">
+            
+            <table>
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>salary</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees">
+                        <td>{{ employee.firstName }}</td>
+                        <td>{{ employee.lastName }}</td>
+                        <td>{{ employee.gender }}</td>
+                        <td>{{ employee.salary }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <hr />
+
+            <ul>
+                <li  ng-repeat="country in countries"> 
+                    {{ country.name }} - Index = {{ $index }}
+                    <ul>
+                        <li ng-repeat="city in country.cities">
+                            {{ city.name }} - Parent Index = {{ $parent.$index }} - Index = {{ $index }}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <hr />
+
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                    <th>Like/Dislike</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="technology in technologies">
+                        <td>{{ technology.name }}</td>
+                        <td>{{ technology.likes }}</td>
+                        <td>{{ technology.dislikes }}</td>
+                        <td>
+                            <input type="button" value="like" ng-click="incrementLike(technology)" />
+                            <input type="button" value="Dislike" ng-click="incrementDislike(technology)" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <hr />
+            Rows to display : <input type="number" step="1" min="0" max="5"  ng-model="rowLimit" />
+            <br /><br />
+            Order by : <select ng-model="sortColum">
+                <option value="name">{{ reverseSort ? 'Name ACS' : 'Name DESC' }}</option>
+                <option value="dateOfBirth">{{ reverseSort ? 'Date of Birth ACS' : 'Date of Birth  DESC' }}</option>
+                <option value="gender">{{ reverseSort ? 'Gender ACS' : 'Gender DESC' }}</option>
+                <option value="salary">{{ reverseSort ? 'Salary ACS' : 'Salary DESC' }}</option>
+            </select>
+            <br /><br />
+            Search : <input type="text" ng-model="searchText1.name" placeholder="Search name" />
+                    <input type="text" ng-model="searchText1.city" placeholder="Search city"  />
+                    <input type="checkbox" ng-model="exactMatch" /> Exact Match
+            <br /><br />
+            Search : <input type="text" ng-model="searchText" placeholder="Search Name & city" />
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th ng-click="sortData('name')">
+                            Name <div ng-class="getSortClass('name')"></div>
+                        </th>
+                        <th ng-click="sortData('dateOfBirth')">
+                            Date of Birth <div ng-class="getSortClass('dateOfBirth')"></div>
+                        </th>
+                        <th ng-click="sortData('gender')">
+                            Gender <div ng-class="getSortClass('gender')"></div>
+                        </th>
+                        <th ng-click="sortData('city')">
+                            City <div ng-class="getSortClass('city')"></div>
+                        </th>
+                        <th ng-click="sortData('salary')">
+                            Salary <div ng-class="getSortClass('salary')"></div>
+                        </th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees1 | orderBy:sortColum:reverseSort | filter:search | filter:searchText1 | limitTo:rowLimit ">
+                        <td>{{ employee.name | uppercase }}</td>
+                        <td>{{ employee.dateOfBirth | date:"dd/MM/yyyy" }}</td>
+                        <td>{{ employee.gender | lowercase }}</td>
+                        <td>{{ employee.city | lowercase }}</td>
+                        <td>{{ employee.salary | number:2 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr />
+
+            <table>
+                <thead>
+                    <tr>
+                        <th> Name </th>
+                        <th> Date of Birth </th>
+                        <th> Gender </th>
+                        <th> City </th>
+                        <th> Salary  </th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees2">
+                        <td>{{ employee.name | uppercase }}</td>
+                        <td>{{ employee.dateOfBirth | date:"dd/MM/yyyy" }}</td>
+                        <td>{{ employee.gender | gender | lowercase }}</td>
+                        <td>{{ employee.city | lowercase }}</td>
+                        <td>{{ employee.salary | number:2 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr />
+
+            <input type="checkbox" ng-model="hideSalary" /> Hide Salary 
+
+            <br /> <br />
+
+            <table>
+                <thead>
+                    <tr>
+                        <th> Name </th>
+                        <th> Gender </th>
+                        <th> City </th>
+                        <th ng-hide="hideSalary"> Salary  </th>
+                        <th ng-show="hideSalary"> Salary  </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees3">
+                        <td>{{ employee.name | uppercase }}</td>
+                        <td>{{ employee.gender | gender | lowercase }}</td>
+                        <td>{{ employee.city | lowercase }}</td>
+                        <td ng-hide="hideSalary">{{ employee.salary | number:2 }}</td>
+                        <td ng-show="hideSalary"> #### </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr />
+
+            <ul>
+                <li ng-repeat="country in countries" ng-init=" parentIndex = $index">
+                    {{ country.name }} - Index = {{ $index }}
+                    <ul>
+                        <li ng-repeat="city in country.cities">
+                            {{ city.name }} - Parent Index = {{ parentIndex }} - Index = {{ $index }}
+                        </li>
+                    </ul>
+                    
+                </li>
+            </ul>
+
+            <hr />
+            
+            Select View :
+            <select ng-model="employeeView">
+                <option value="content/employeeTable.html">Table</option>
+                <option value="content/employeeList.html">List</option>
+            </select>
+            <br /> <br />
+            <div ng-include="employeeView"></div>
+
+            <hr />
+
+            <employee-list></employee-list>
+            <employee-table></employee-table>
+
+            <hr />
+
+
+        </div>
+    </body>
+
+    <script src="/app/app.js"></script>
+    <script src="/app/filters/gender.js"></script>
+    <script src="/app/directive/employeeList.js"></script>
+    <script src="/app/directive/employeeTable.js"></script>
+    <script src="/app/services/employee.js"></script>
+    <script src="/app/services/employee.js"></script>
+    <script src="/app/controllers/NinjaController.js"></script>
+
+
+</html>
+
+

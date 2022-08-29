@@ -1,0 +1,25 @@
+<h1>Student Details</h1>
+<div ng-repeat="student in studentCtrl.students">
+
+    <table style="border: 1px solid black;">
+            <tr>
+                <td>id</td>
+                <td>{{ student.id }}</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>{{ student.name }}</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>{{ student.gender }}</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>{{ student.city }}</td>
+            </tr>
+    </table>
+
+</div>
+
+<a href="students">Back to Students List</a>
